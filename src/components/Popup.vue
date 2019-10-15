@@ -1,7 +1,7 @@
 <template >
   <v-dialog max-width="600px" v-model="dialog">
     <template v-slot:activator="{on}">
-      <v-btn block v-on="on" color="red" class="mb-4">Добавить</v-btn>
+      <v-btn block v-on="on" color="red">Добавить</v-btn>
     </template>
     <v-card max-width="600px">
       <v-card-title>
@@ -68,7 +68,6 @@ export default {
           this.dialog = false;
           this.$emit("incomeAdded");
         });
-      console.log("1" + this.income);
     }
   }
 };
