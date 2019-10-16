@@ -2,7 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import MainPage from "./views/MainPage.vue";
-import LoginRegistration from "./views/LoginRegistration";
+import Login from "./views/Login";
+import Registration from "./views/Registration";
 
 Vue.use(Router);
 
@@ -21,40 +22,12 @@ export default new Router({
     {
       path: "/registration",
       name: "registration",
-      component: LoginRegistration
+      component: Registration
     },
     {
       path: "/login",
       name: "login",
-      component: LoginRegistration
+      component: Login
     }
   ]
 });
-
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some(record => record.meta.requiresAuth)) {
-//     if (!firebase.auth().currentUser) {
-//       next({
-//         path: "/login",
-//         query: {
-//           redirect: to.fullPath
-//         }
-//       });
-//     } else {
-//       next();
-//     }
-//   } else if (to.matched.some(record => record.meta.requiresGuest)) {
-//     if (firebase.auth().currentUser) {
-//       next({
-//         path: "/main",
-//         query: {
-//           redirect: to.fullPath
-//         }
-//       });
-//     } else {
-//       next();
-//     }
-//   } else {
-//     next();
-//   }
-// });

@@ -1,4 +1,5 @@
 <template>
+  <!-- help to select data from input in pop-up  -->
   <v-container>
     <v-col>
       <v-menu
@@ -32,7 +33,7 @@ export default {
   }),
   computed: {
     computedDateFormatted() {
-      this.$emit("dataTake", this.date);
+      this.$emit("dataTake", this.date); // push the date to parent component(Popup)
       return this.formatDate(this.date);
     }
   },
@@ -45,7 +46,6 @@ export default {
     formatDate(date) {
       if (!date) return null;
       const [year, month, day] = date.split("-");
-      console.log(this.date);
       return `${day}/${month}/${year}`;
     },
     parseDate(date) {

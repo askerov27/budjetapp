@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import appCarousel from "../components/app-carousel/appCarousel";
+import appCarousel from "../components/appCarousel";
 import qouteHome from "../components/qouteHome.vue";
 export default {
   components: {

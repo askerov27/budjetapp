@@ -40,7 +40,7 @@ export default {
   },
   data: () => ({
     items: ["Еда", "Зарплата", "Платежи", "Машина"],
-    radios: "Income",
+    radios: "Расход",
     category: "",
     income: "",
     loading: false,
